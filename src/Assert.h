@@ -27,16 +27,12 @@
 
 
 #include <iostream>
-#include <assert.h>
+#include <cassert>
 #include <exception>
 
 // kill any existing declarations
 #ifdef ASSERT
 #undef ASSERT
-#endif
-
-#ifdef VERIFY
-#undef VERIFY
 #endif
 
 #ifdef DEBUG
@@ -46,8 +42,6 @@
 //--------------
 //  debug macros
 //--------------
-#define BREAK_CPU()            //__asm { int 3 }
-
 #define ASSERT(expr)\
         {\
             if( !(expr) )\
@@ -58,17 +52,6 @@
                 throw std::exception();\
             }\
         }
-
-#define VERIFY(expr)\
-        {\
-            if( !(expr) )\
-            {\
-                std::cout << "\n*** VERIFY FAILED ***\n" << \
-                __FILE__ ", line " << __LINE__ << ": " << \
-                #expr << " is false\n\n";\
-                BREAK_CPU();\
-            }\
-        }
 #else
 
 #define ASSERT(expr)\
@@ -76,16 +59,6 @@
             if( !(expr) )\
             {\
                 std::cout << "\n*** ASSERT ***\n"; \
-                assert(expr);\
-            }\
-        }
-
-
-#define VERIFY(expr)\
-        {\
-            if( !(expr) )\
-            {\
-                std::cout << "\n*** VERIFY FAILED ***\n"; \
                 assert(expr);\
             }\
         }
@@ -100,9 +73,6 @@
 
 // ASSERT gets optimised out completely
 #define ASSERT(expr)
-
-// verify has expression evaluated, but no further action taken
-#define VERIFY(expr) //if( expr ) {}
 
 #endif
 
