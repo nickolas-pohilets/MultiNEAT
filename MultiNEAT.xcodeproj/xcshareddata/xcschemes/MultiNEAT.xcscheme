@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4AC435C91EEDD2C0005F8511"
-               BuildableName = "libMultiNEAT.dylib"
+               BuildableName = "MultiNEAT.framework"
                BlueprintName = "MultiNEAT"
                ReferencedContainer = "container:MultiNEAT.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4AC435C91EEDD2C0005F8511"
-            BuildableName = "libMultiNEAT.dylib"
+            BuildableName = "MultiNEAT.framework"
             BlueprintName = "MultiNEAT"
             ReferencedContainer = "container:MultiNEAT.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4AC435C91EEDD2C0005F8511"
-            BuildableName = "libMultiNEAT.dylib"
+            BuildableName = "MultiNEAT.framework"
             BlueprintName = "MultiNEAT"
             ReferencedContainer = "container:MultiNEAT.xcodeproj">
          </BuildableReference>
