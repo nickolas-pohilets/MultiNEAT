@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4AC435F31EEDD32A005F8511 /* Assert.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435D81EEDD32A005F8511 /* Assert.h */; };
+		4AC435F41EEDD32A005F8511 /* Genes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435D91EEDD32A005F8511 /* Genes.h */; };
+		4AC435F51EEDD32A005F8511 /* Genome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435DA1EEDD32A005F8511 /* Genome.cpp */; };
+		4AC435F61EEDD32A005F8511 /* Genome.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435DB1EEDD32A005F8511 /* Genome.h */; };
+		4AC435F71EEDD32A005F8511 /* Innovation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435DC1EEDD32A005F8511 /* Innovation.cpp */; };
+		4AC435F81EEDD32A005F8511 /* Innovation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435DD1EEDD32A005F8511 /* Innovation.h */; };
+		4AC435F91EEDD32A005F8511 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435DE1EEDD32A005F8511 /* Main.cpp */; };
+		4AC435FA1EEDD32A005F8511 /* NeuralNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435DF1EEDD32A005F8511 /* NeuralNetwork.cpp */; };
+		4AC435FB1EEDD32A005F8511 /* NeuralNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435E01EEDD32A005F8511 /* NeuralNetwork.h */; };
+		4AC435FC1EEDD32A005F8511 /* Parameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435E11EEDD32A005F8511 /* Parameters.cpp */; };
+		4AC435FD1EEDD32A005F8511 /* Parameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435E21EEDD32A005F8511 /* Parameters.h */; };
+		4AC435FE1EEDD32A005F8511 /* PhenotypeBehavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435E31EEDD32A005F8511 /* PhenotypeBehavior.cpp */; };
+		4AC435FF1EEDD32A005F8511 /* PhenotypeBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435E41EEDD32A005F8511 /* PhenotypeBehavior.h */; };
+		4AC436001EEDD32A005F8511 /* Population.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435E51EEDD32A005F8511 /* Population.cpp */; };
+		4AC436011EEDD32A005F8511 /* Population.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435E61EEDD32A005F8511 /* Population.h */; };
+		4AC436021EEDD32A005F8511 /* PythonBindings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435E71EEDD32A005F8511 /* PythonBindings.cpp */; };
+		4AC436031EEDD32A005F8511 /* PythonBindings.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435E81EEDD32A005F8511 /* PythonBindings.h */; };
+		4AC436041EEDD32A005F8511 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435E91EEDD32A005F8511 /* Random.cpp */; };
+		4AC436051EEDD32A005F8511 /* Random.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435EA1EEDD32A005F8511 /* Random.h */; };
+		4AC436061EEDD32A005F8511 /* Species.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435EB1EEDD32A005F8511 /* Species.cpp */; };
+		4AC436071EEDD32A005F8511 /* Species.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435EC1EEDD32A005F8511 /* Species.h */; };
+		4AC436081EEDD32A005F8511 /* Substrate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435ED1EEDD32A005F8511 /* Substrate.cpp */; };
+		4AC436091EEDD32A005F8511 /* Substrate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435EE1EEDD32A005F8511 /* Substrate.h */; };
+		4AC4360A1EEDD32A005F8511 /* Traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435EF1EEDD32A005F8511 /* Traits.cpp */; };
+		4AC4360B1EEDD32A005F8511 /* Traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435F01EEDD32A005F8511 /* Traits.h */; };
+		4AC4360C1EEDD32A005F8511 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435F11EEDD32A005F8511 /* Utils.cpp */; };
+		4AC4360D1EEDD32A005F8511 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435F21EEDD32A005F8511 /* Utils.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4AC435CA1EEDD2C0005F8511 /* libMultiNEAT.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMultiNEAT.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC435D81EEDD32A005F8511 /* Assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assert.h; sourceTree = "<group>"; };
+		4AC435D91EEDD32A005F8511 /* Genes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genes.h; sourceTree = "<group>"; };
+		4AC435DA1EEDD32A005F8511 /* Genome.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Genome.cpp; sourceTree = "<group>"; };
+		4AC435DB1EEDD32A005F8511 /* Genome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genome.h; sourceTree = "<group>"; };
+		4AC435DC1EEDD32A005F8511 /* Innovation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Innovation.cpp; sourceTree = "<group>"; };
+		4AC435DD1EEDD32A005F8511 /* Innovation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Innovation.h; sourceTree = "<group>"; };
+		4AC435DE1EEDD32A005F8511 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		4AC435DF1EEDD32A005F8511 /* NeuralNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuralNetwork.cpp; sourceTree = "<group>"; };
+		4AC435E01EEDD32A005F8511 /* NeuralNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuralNetwork.h; sourceTree = "<group>"; };
+		4AC435E11EEDD32A005F8511 /* Parameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parameters.cpp; sourceTree = "<group>"; };
+		4AC435E21EEDD32A005F8511 /* Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
+		4AC435E31EEDD32A005F8511 /* PhenotypeBehavior.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhenotypeBehavior.cpp; sourceTree = "<group>"; };
+		4AC435E41EEDD32A005F8511 /* PhenotypeBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhenotypeBehavior.h; sourceTree = "<group>"; };
+		4AC435E51EEDD32A005F8511 /* Population.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Population.cpp; sourceTree = "<group>"; };
+		4AC435E61EEDD32A005F8511 /* Population.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Population.h; sourceTree = "<group>"; };
+		4AC435E71EEDD32A005F8511 /* PythonBindings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PythonBindings.cpp; sourceTree = "<group>"; };
+		4AC435E81EEDD32A005F8511 /* PythonBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PythonBindings.h; sourceTree = "<group>"; };
+		4AC435E91EEDD32A005F8511 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		4AC435EA1EEDD32A005F8511 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		4AC435EB1EEDD32A005F8511 /* Species.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Species.cpp; sourceTree = "<group>"; };
+		4AC435EC1EEDD32A005F8511 /* Species.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Species.h; sourceTree = "<group>"; };
+		4AC435ED1EEDD32A005F8511 /* Substrate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Substrate.cpp; sourceTree = "<group>"; };
+		4AC435EE1EEDD32A005F8511 /* Substrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Substrate.h; sourceTree = "<group>"; };
+		4AC435EF1EEDD32A005F8511 /* Traits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Traits.cpp; sourceTree = "<group>"; };
+		4AC435F01EEDD32A005F8511 /* Traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Traits.h; sourceTree = "<group>"; };
+		4AC435F11EEDD32A005F8511 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		4AC435F21EEDD32A005F8511 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AC435C71EEDD2C0005F8511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AC435C11EEDD2C0005F8511 = {
+			isa = PBXGroup;
+			children = (
+				4AC435CC1EEDD2C0005F8511 /* MultiNEAT */,
+				4AC435CB1EEDD2C0005F8511 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4AC435CB1EEDD2C0005F8511 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AC435CA1EEDD2C0005F8511 /* libMultiNEAT.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AC435CC1EEDD2C0005F8511 /* MultiNEAT */ = {
+			isa = PBXGroup;
+			children = (
+				4AC435D81EEDD32A005F8511 /* Assert.h */,
+				4AC435D91EEDD32A005F8511 /* Genes.h */,
+				4AC435DA1EEDD32A005F8511 /* Genome.cpp */,
+				4AC435DB1EEDD32A005F8511 /* Genome.h */,
+				4AC435DC1EEDD32A005F8511 /* Innovation.cpp */,
+				4AC435DD1EEDD32A005F8511 /* Innovation.h */,
+				4AC435DE1EEDD32A005F8511 /* Main.cpp */,
+				4AC435DF1EEDD32A005F8511 /* NeuralNetwork.cpp */,
+				4AC435E01EEDD32A005F8511 /* NeuralNetwork.h */,
+				4AC435E11EEDD32A005F8511 /* Parameters.cpp */,
+				4AC435E21EEDD32A005F8511 /* Parameters.h */,
+				4AC435E31EEDD32A005F8511 /* PhenotypeBehavior.cpp */,
+				4AC435E41EEDD32A005F8511 /* PhenotypeBehavior.h */,
+				4AC435E51EEDD32A005F8511 /* Population.cpp */,
+				4AC435E61EEDD32A005F8511 /* Population.h */,
+				4AC435E71EEDD32A005F8511 /* PythonBindings.cpp */,
+				4AC435E81EEDD32A005F8511 /* PythonBindings.h */,
+				4AC435E91EEDD32A005F8511 /* Random.cpp */,
+				4AC435EA1EEDD32A005F8511 /* Random.h */,
+				4AC435EB1EEDD32A005F8511 /* Species.cpp */,
+				4AC435EC1EEDD32A005F8511 /* Species.h */,
+				4AC435ED1EEDD32A005F8511 /* Substrate.cpp */,
+				4AC435EE1EEDD32A005F8511 /* Substrate.h */,
+				4AC435EF1EEDD32A005F8511 /* Traits.cpp */,
+				4AC435F01EEDD32A005F8511 /* Traits.h */,
+				4AC435F11EEDD32A005F8511 /* Utils.cpp */,
+				4AC435F21EEDD32A005F8511 /* Utils.h */,
+			);
+			name = MultiNEAT;
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4AC435C81EEDD2C0005F8511 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC435FB1EEDD32A005F8511 /* NeuralNetwork.h in Headers */,
+				4AC436071EEDD32A005F8511 /* Species.h in Headers */,
+				4AC435F61EEDD32A005F8511 /* Genome.h in Headers */,
+				4AC435F31EEDD32A005F8511 /* Assert.h in Headers */,
+				4AC4360D1EEDD32A005F8511 /* Utils.h in Headers */,
+				4AC435F41EEDD32A005F8511 /* Genes.h in Headers */,
+				4AC435FF1EEDD32A005F8511 /* PhenotypeBehavior.h in Headers */,
+				4AC436031EEDD32A005F8511 /* PythonBindings.h in Headers */,
+				4AC436011EEDD32A005F8511 /* Population.h in Headers */,
+				4AC435FD1EEDD32A005F8511 /* Parameters.h in Headers */,
+				4AC435F81EEDD32A005F8511 /* Innovation.h in Headers */,
+				4AC436091EEDD32A005F8511 /* Substrate.h in Headers */,
+				4AC4360B1EEDD32A005F8511 /* Traits.h in Headers */,
+				4AC436051EEDD32A005F8511 /* Random.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4AC435C91EEDD2C0005F8511 /* MultiNEAT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AC435D51EEDD2C0005F8511 /* Build configuration list for PBXNativeTarget "MultiNEAT" */;
+			buildPhases = (
+				4AC435C61EEDD2C0005F8511 /* Sources */,
+				4AC435C71EEDD2C0005F8511 /* Frameworks */,
+				4AC435C81EEDD2C0005F8511 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiNEAT;
+			productName = MultiNEAT;
+			productReference = 4AC435CA1EEDD2C0005F8511 /* libMultiNEAT.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4AC435C21EEDD2C0005F8511 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Nickolas Pokhylets";
+				TargetAttributes = {
+					4AC435C91EEDD2C0005F8511 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = Z74EEZM358;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4AC435C51EEDD2C0005F8511 /* Build configuration list for PBXProject "MultiNEAT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4AC435C11EEDD2C0005F8511;
+			productRefGroup = 4AC435CB1EEDD2C0005F8511 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4AC435C91EEDD2C0005F8511 /* MultiNEAT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4AC435C61EEDD2C0005F8511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC436061EEDD32A005F8511 /* Species.cpp in Sources */,
+				4AC436001EEDD32A005F8511 /* Population.cpp in Sources */,
+				4AC4360A1EEDD32A005F8511 /* Traits.cpp in Sources */,
+				4AC435FC1EEDD32A005F8511 /* Parameters.cpp in Sources */,
+				4AC435F91EEDD32A005F8511 /* Main.cpp in Sources */,
+				4AC436041EEDD32A005F8511 /* Random.cpp in Sources */,
+				4AC436021EEDD32A005F8511 /* PythonBindings.cpp in Sources */,
+				4AC435F71EEDD32A005F8511 /* Innovation.cpp in Sources */,
+				4AC435F51EEDD32A005F8511 /* Genome.cpp in Sources */,
+				4AC4360C1EEDD32A005F8511 /* Utils.cpp in Sources */,
+				4AC436081EEDD32A005F8511 /* Substrate.cpp in Sources */,
+				4AC435FE1EEDD32A005F8511 /* PhenotypeBehavior.cpp in Sources */,
+				4AC435FA1EEDD32A005F8511 /* NeuralNetwork.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4AC435D31EEDD2C0005F8511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4AC435D41EEDD2C0005F8511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4AC435D61EEDD2C0005F8511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Z74EEZM358;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4AC435D71EEDD2C0005F8511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Z74EEZM358;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4AC435C51EEDD2C0005F8511 /* Build configuration list for PBXProject "MultiNEAT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC435D31EEDD2C0005F8511 /* Debug */,
+				4AC435D41EEDD2C0005F8511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AC435D51EEDD2C0005F8511 /* Build configuration list for PBXNativeTarget "MultiNEAT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC435D61EEDD2C0005F8511 /* Debug */,
+				4AC435D71EEDD2C0005F8511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4AC435C21EEDD2C0005F8511 /* Project object */;
+}

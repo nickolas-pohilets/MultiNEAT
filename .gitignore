@@ -39,3 +39,5 @@ eggs/
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+MultiNEAT.xcodeproj/project.xcworkspace/xcuserdata
+MultiNEAT.xcodeproj/xcuserdata
