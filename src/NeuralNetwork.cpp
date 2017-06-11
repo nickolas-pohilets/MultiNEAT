@@ -589,7 +589,7 @@ void NeuralNetwork::FlushCube()
             for (unsigned int k = 0; k < m_neurons.size(); k++)
                 m_neurons[k].m_sensitivity_matrix[i][j] = 0;
 }
-void NeuralNetwork::Input(std::vector<double>& a_Inputs)
+void NeuralNetwork::Input(std::vector<double> const & a_Inputs)
 {
 	unsigned mx = a_Inputs.size();
 	if (mx > m_num_inputs)

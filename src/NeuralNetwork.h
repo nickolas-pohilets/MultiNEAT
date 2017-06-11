@@ -152,7 +152,7 @@ public:
     void Flush();     // clears all activations
     void FlushCube(); // clears the sensitivity cube
 
-    void Input(std::vector<double>& a_Inputs);
+    void Input(std::vector<double> const & a_Inputs);
 
 #ifdef USE_BOOST_PYTHON
 
