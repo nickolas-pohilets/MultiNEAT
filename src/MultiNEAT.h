@@ -30,5 +30,6 @@
 // Description: Umbrella framework header.
 /////////////////////////////////////////////////////////////////
 #include "Genome.h"
+#include "Population.h"
 
 #endif
