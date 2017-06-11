@@ -9,6 +9,7 @@
 #include <boost/any.hpp>
 #include <boost/variant.hpp>
 #include <cmath>
+#include <vector>
 
 namespace bs = boost;
 
