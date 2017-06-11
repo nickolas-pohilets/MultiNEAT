@@ -31,7 +31,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <vector>
-#include "Assert.h"
+#include <cassert>
 
 namespace NEAT
 {
@@ -54,14 +54,14 @@ public:
     // evaluation
     virtual bool   Acquire(Genome* a_Genome)
     {
-        //ASSERT(false);
+        //assert(false);
         return false;
     }
 
     // Overload this method to calcluate distance between behaviors
     virtual double Distance_To(PhenotypeBehavior* a_Other)
     {
-        //ASSERT(false);
+        //assert(false);
         return 0;
     }
 
@@ -69,7 +69,7 @@ public:
     // we're looking for. Not necessary to call/overload this in open-ended evolution
     virtual bool   Successful()
     {
-        //ASSERT(false);
+        //assert(false);
         return true;
     }
     

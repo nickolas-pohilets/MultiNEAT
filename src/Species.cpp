@@ -108,7 +108,7 @@ namespace NEAT
     // returns an individual randomly selected from the best N%
     Genome Species::GetIndividual(Parameters &a_Parameters, RNG &a_RNG) const
     {
-        ASSERT(m_Individuals.size() > 0);
+        assert(m_Individuals.size() > 0);
 
         // Make a pool of only evaluated individuals!
         std::vector<Genome> t_Evaluated;
@@ -118,7 +118,7 @@ namespace NEAT
                 t_Evaluated.push_back(m_Individuals[i]);
         }
 
-        ASSERT(t_Evaluated.size() > 0);
+        assert(t_Evaluated.size() > 0);
 
         if (t_Evaluated.size() == 1)
         {
@@ -141,7 +141,7 @@ namespace NEAT
             int t_num_parents = static_cast<int>( floor(
                     (a_Parameters.SurvivalRate * (static_cast<double>(t_Evaluated.size()))) + 1.0));
 
-            ASSERT(t_num_parents > 0);
+            assert(t_num_parents > 0);
             t_chosen_one = a_RNG.RandInt(0, t_num_parents);
             for (unsigned int i = 0; i < a_Parameters.TournamentSize; i++)
             {
@@ -206,7 +206,7 @@ namespace NEAT
             }
         }
 
-        ASSERT(t_leader_idx != -1);
+        assert(t_leader_idx != -1);
         return (m_Individuals[t_leader_idx]);
     }
 
@@ -232,7 +232,7 @@ namespace NEAT
 // it also boosts the fitness of the young and penalizes old species
     void Species::AdjustFitness(Parameters &a_Parameters)
     {
-        ASSERT(m_Individuals.size() > 0);
+        assert(m_Individuals.size() > 0);
 
         // iterate through the members
         for (unsigned int i = 0; i < m_Individuals.size(); i++)
@@ -241,7 +241,7 @@ namespace NEAT
 
             // the fitness must be positive
             //DBG(t_fitness);
-            ASSERT(t_fitness >= 0);
+            assert(t_fitness >= 0);
 
             // this prevents the fitness to be below zero
             if (t_fitness <= 0) t_fitness = 0.0001;
@@ -304,7 +304,7 @@ namespace NEAT
 // Removes an individual from the species by its index within the species
     void Species::RemoveIndividual(unsigned int a_idx)
     {
-        ASSERT(a_idx < m_Individuals.size());
+        assert(a_idx < m_Individuals.size());
         m_Individuals.erase(m_Individuals.begin() + a_idx);
     }
 
@@ -355,7 +355,7 @@ namespace NEAT
                     bool t_mated = false;
 
                     // There must be individuals there..
-                    ASSERT(NumIndividuals() > 0);
+                    assert(NumIndividuals() > 0);
 
                     // for a species of size 1 we can only mutate
                     // NOTE: but does it make sense since we know this is the champ?
@@ -573,7 +573,7 @@ namespace NEAT
 
 
         // There must be individuals there..
-        ASSERT(NumIndividuals() > 0);
+        assert(NumIndividuals() > 0);
 
         // for a species of size 1 we can only mutate
         // NOTE: but does it make sense since we know this is the champ?

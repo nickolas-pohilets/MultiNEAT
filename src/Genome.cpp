@@ -44,7 +44,7 @@
 #include "Random.h"
 #include "Utils.h"
 #include "Parameters.h"
-#include "Assert.h"
+#include <cassert>
 
 namespace NEAT
 {
@@ -123,7 +123,7 @@ namespace NEAT
                    unsigned int a_SeedType,
                    const Parameters &a_Parameters)
     {
-        ASSERT((a_NumInputs > 1) && (a_NumOutputs > 0));
+        assert((a_NumInputs > 1) && (a_NumOutputs > 0));
         RNG t_RNG;
         t_RNG.TimeSeed();
 
@@ -365,32 +365,32 @@ namespace NEAT
 
     void Genome::SetNeuronY(unsigned int a_idx, int a_y)
     {
-        ASSERT(a_idx < m_NeuronGenes.size());
+        assert(a_idx < m_NeuronGenes.size());
         m_NeuronGenes[a_idx].y = a_y;
     }
 
     void Genome::SetNeuronX(unsigned int a_idx, int a_x)
     {
-        ASSERT(a_idx < m_NeuronGenes.size());
+        assert(a_idx < m_NeuronGenes.size());
         m_NeuronGenes[a_idx].x = a_x;
     }
 
     void Genome::SetNeuronXY(unsigned int a_idx, int a_x, int a_y)
     {
-        ASSERT(a_idx < m_NeuronGenes.size());
+        assert(a_idx < m_NeuronGenes.size());
         m_NeuronGenes[a_idx].x = a_x;
         m_NeuronGenes[a_idx].y = a_y;
     }
 
     LinkGene Genome::GetLinkByIndex(int a_idx) const
     {
-        ASSERT(a_idx < m_LinkGenes.size());
+        assert(a_idx < m_LinkGenes.size());
         return m_LinkGenes[a_idx];
     }
 
     LinkGene Genome::GetLinkByInnovID(int a_ID) const
     {
-        ASSERT(HasLinkByInnovID(a_ID));
+        assert(HasLinkByInnovID(a_ID));
         for (unsigned int i = 0; i < m_LinkGenes.size(); i++)
             if (m_LinkGenes[i].InnovationID() == a_ID)
                 return m_LinkGenes[i];
@@ -401,15 +401,15 @@ namespace NEAT
 
     NeuronGene Genome::GetNeuronByIndex(int a_idx) const
     {
-        ASSERT(a_idx < m_NeuronGenes.size());
+        assert(a_idx < m_NeuronGenes.size());
         return m_NeuronGenes[a_idx];
     }
 
     NeuronGene Genome::GetNeuronByID(int a_ID) const
     {
-        ASSERT(HasNeuronID(a_ID));
+        assert(HasNeuronID(a_ID));
         int t_idx = GetNeuronIndex(a_ID);
-        ASSERT(t_idx != -1);
+        assert(t_idx != -1);
         return m_NeuronGenes[t_idx];
     }
 
@@ -442,7 +442,7 @@ namespace NEAT
     // returns -1 if not found
     int Genome::GetNeuronIndex(int a_ID) const
     {
-        ASSERT(a_ID > 0);
+        assert(a_ID > 0);
 
         for (unsigned int i = 0; i < NumNeurons(); i++)
         {
@@ -459,8 +459,8 @@ namespace NEAT
     // returns -1 if not found
     int Genome::GetLinkIndex(int a_InnovID) const
     {
-        ASSERT(a_InnovID > 0);
-        ASSERT(NumLinks() > 0);
+        assert(a_InnovID > 0);
+        assert(NumLinks() > 0);
 
         for (unsigned int i = 0; i < NumLinks(); i++)
         {
@@ -477,7 +477,7 @@ namespace NEAT
     // returns the max neuron ID
     int Genome::GetLastNeuronID() const
     {
-        ASSERT(NumNeurons() > 0);
+        assert(NumNeurons() > 0);
 
         int t_maxid = 0;
 
@@ -493,7 +493,7 @@ namespace NEAT
     // returns the max innovation Id
     int Genome::GetLastInnovationID() const
     {
-        ASSERT(NumLinks() > 0);
+        assert(NumLinks() > 0);
 
         int t_maxid = 0;
 
@@ -509,8 +509,8 @@ namespace NEAT
     // Returns true if the specified neuron ID is present in the genome
     bool Genome::HasNeuronID(int a_ID) const
     {
-        ASSERT(a_ID > 0);
-        ASSERT(NumNeurons() > 0);
+        assert(a_ID > 0);
+        assert(NumNeurons() > 0);
 
         for (unsigned int i = 0; i < NumNeurons(); i++)
         {
@@ -527,7 +527,7 @@ namespace NEAT
     // Returns true if the specified link is present in the genome
     bool Genome::HasLink(int a_n1id, int a_n2id) const
     {
-        ASSERT((a_n1id > 0) && (a_n2id > 0));
+        assert((a_n1id > 0) && (a_n2id > 0));
 
         for (unsigned int i = 0; i < NumLinks(); i++)
         {
@@ -570,7 +570,7 @@ namespace NEAT
     // Returns true if the specified link is present in the genome
     bool Genome::HasLinkByInnovID(int id) const
     {
-        ASSERT(id > 0);
+        assert(id > 0);
 
         for (unsigned int i = 0; i < NumLinks(); i++)
         {
@@ -645,18 +645,18 @@ namespace NEAT
     void Genome::BuildHyperNEATPhenotype(NeuralNetwork &net, Substrate &subst)
     {
         // We need a substrate with at least one input and output
-        ASSERT(subst.m_input_coords.size() > 0);
-        ASSERT(subst.m_output_coords.size() > 0);
+        assert(subst.m_input_coords.size() > 0);
+        assert(subst.m_output_coords.size() > 0);
 
         int max_dims = subst.GetMaxDims();
 
         // Make sure the CPPN dimensionality is right
-        ASSERT(subst.GetMinCPPNInputs() > 0);
-        ASSERT(NumInputs() >= subst.GetMinCPPNInputs());
-        ASSERT(NumOutputs() >= subst.GetMinCPPNOutputs());
+        assert(subst.GetMinCPPNInputs() > 0);
+        assert(NumInputs() >= subst.GetMinCPPNInputs());
+        assert(NumOutputs() >= subst.GetMinCPPNOutputs());
         if (subst.m_leaky)
         {
-            ASSERT(NumOutputs() >= subst.GetMinCPPNOutputs());
+            assert(NumOutputs() >= subst.GetMinCPPNOutputs());
         }
 
         // Now we create the substrate (net)
@@ -671,7 +671,7 @@ namespace NEAT
             t_n.m_a = 1;
             t_n.m_b = 0;
             t_n.m_substrate_coords = subst.m_input_coords[i];
-            ASSERT(t_n.m_substrate_coords.size() > 0); // prevent 0D points
+            assert(t_n.m_substrate_coords.size() > 0); // prevent 0D points
             t_n.m_activation_function_type = NEAT::LINEAR;
             t_n.m_type = NEAT::INPUT;
 
@@ -686,7 +686,7 @@ namespace NEAT
             t_n.m_a = 1;
             t_n.m_b = 0;
             t_n.m_substrate_coords = subst.m_output_coords[i];
-            ASSERT(t_n.m_substrate_coords.size() > 0); // prevent 0D points
+            assert(t_n.m_substrate_coords.size() > 0); // prevent 0D points
             t_n.m_activation_function_type = subst.m_output_nodes_activation;
             t_n.m_type = NEAT::OUTPUT;
 
@@ -701,7 +701,7 @@ namespace NEAT
             t_n.m_a = 1;
             t_n.m_b = 0;
             t_n.m_substrate_coords = subst.m_hidden_coords[i];
-            ASSERT(t_n.m_substrate_coords.size() > 0); // prevent 0D points
+            assert(t_n.m_substrate_coords.size() > 0); // prevent 0D points
             t_n.m_activation_function_type = subst.m_hidden_nodes_activation;
             t_n.m_type = NEAT::HIDDEN;
 
@@ -1311,7 +1311,7 @@ namespace NEAT
             t_in = m_LinkGenes[t_link_num].FromNeuronID();
             t_out = m_LinkGenes[t_link_num].ToNeuronID();
 
-            ASSERT((t_in > 0) && (t_out > 0));
+            assert((t_in > 0) && (t_out > 0));
 
             t_link_found = true;
 
@@ -1449,13 +1449,13 @@ namespace NEAT
 
             // get the neuron ID
             t_nid = a_Innovs.FindNeuronID(t_in, t_out);
-            ASSERT(t_nid != -1);
+            assert(t_nid != -1);
 
             // if such an innovation happened, these must exist
             t_l1id = a_Innovs.CheckInnovation(t_in, t_nid, NEW_LINK);
             t_l2id = a_Innovs.CheckInnovation(t_nid, t_out, NEW_LINK);
 
-            ASSERT((t_l1id > 0) && (t_l2id > 0));
+            assert((t_l1id > 0) && (t_l2id > 0));
 
             // Perhaps this innovation occured more than once. Find the
             // first such innovation that had occured, but the genome
@@ -1474,7 +1474,7 @@ namespace NEAT
                     t_l1id = a_Innovs.CheckInnovation(t_in, t_nid, NEW_LINK);
                     t_l2id = a_Innovs.CheckInnovation(t_nid, t_out, NEW_LINK);
 
-                    ASSERT((t_l1id > 0) && (t_l2id > 0));
+                    assert((t_l1id > 0) && (t_l2id > 0));
 
                     t_found = true;
                     break;
@@ -1741,7 +1741,7 @@ namespace NEAT
         }
 
         // This link MUST NOT be a part of the genome by any reason
-        ASSERT((!HasLink(m_NeuronGenes[t_n1idx].ID(), m_NeuronGenes[t_n2idx].ID()))); // already present?
+        assert((!HasLink(m_NeuronGenes[t_n1idx].ID(), m_NeuronGenes[t_n2idx].ID()))); // already present?
 
         // extract the neuron IDs from the indexes
         int t_n1id = m_NeuronGenes[t_n1idx].ID();
@@ -2078,7 +2078,7 @@ namespace NEAT
             }
         }
 
-        ASSERT((t_l1idx >= 0) && (t_l2idx >= 0));
+        assert((t_l1idx >= 0) && (t_l2idx >= 0));
 
         // OK now see if a link connecting the original 2 nodes is present. If it is, we will just
         // delete the neuron and quit.
@@ -3175,8 +3175,8 @@ namespace NEAT
 
     void Genome::BuildESHyperNEATPhenotype(NeuralNetwork &net, Substrate &subst, Parameters &params)
     {
-        ASSERT(subst.m_input_coords.size() > 0);
-        ASSERT(subst.m_output_coords.size() > 0);
+        assert(subst.m_input_coords.size() > 0);
+        assert(subst.m_output_coords.size() > 0);
 
         unsigned int input_count = subst.m_input_coords.size();
         unsigned int output_count = subst.m_output_coords.size();
@@ -3375,7 +3375,7 @@ namespace NEAT
             t_n.m_b = 0;
             t_n.m_substrate_coords = itr->first;
 
-            ASSERT(t_n.m_substrate_coords.size() > 0); // prevent 0D points
+            assert(t_n.m_substrate_coords.size() > 0); // prevent 0D points
             t_n.m_activation_function_type = subst.m_hidden_nodes_activation;
             t_n.m_type = NEAT::HIDDEN;
             net.m_neurons.push_back(t_n);

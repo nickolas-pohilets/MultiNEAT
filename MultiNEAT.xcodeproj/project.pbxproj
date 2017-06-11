@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AC435F31EEDD32A005F8511 /* Assert.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435D81EEDD32A005F8511 /* Assert.h */; };
 		4AC435F41EEDD32A005F8511 /* Genes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435D91EEDD32A005F8511 /* Genes.h */; };
 		4AC435F51EEDD32A005F8511 /* Genome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC435DA1EEDD32A005F8511 /* Genome.cpp */; };
 		4AC435F61EEDD32A005F8511 /* Genome.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC435DB1EEDD32A005F8511 /* Genome.h */; };
@@ -38,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		4AC435CA1EEDD2C0005F8511 /* libMultiNEAT.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMultiNEAT.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AC435D81EEDD32A005F8511 /* Assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assert.h; sourceTree = "<group>"; };
 		4AC435D91EEDD32A005F8511 /* Genes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genes.h; sourceTree = "<group>"; };
 		4AC435DA1EEDD32A005F8511 /* Genome.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Genome.cpp; sourceTree = "<group>"; };
 		4AC435DB1EEDD32A005F8511 /* Genome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genome.h; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 		4AC435CC1EEDD2C0005F8511 /* MultiNEAT */ = {
 			isa = PBXGroup;
 			children = (
-				4AC435D81EEDD32A005F8511 /* Assert.h */,
 				4AC435D91EEDD32A005F8511 /* Genes.h */,
 				4AC435DA1EEDD32A005F8511 /* Genome.cpp */,
 				4AC435DB1EEDD32A005F8511 /* Genome.h */,
@@ -139,7 +136,6 @@
 				4AC435FB1EEDD32A005F8511 /* NeuralNetwork.h in Headers */,
 				4AC436071EEDD32A005F8511 /* Species.h in Headers */,
 				4AC435F61EEDD32A005F8511 /* Genome.h in Headers */,
-				4AC435F31EEDD32A005F8511 /* Assert.h in Headers */,
 				4AC4360D1EEDD32A005F8511 /* Utils.h in Headers */,
 				4AC435F41EEDD32A005F8511 /* Genes.h in Headers */,
 				4AC435FF1EEDD32A005F8511 /* PhenotypeBehavior.h in Headers */,

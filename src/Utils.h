@@ -37,7 +37,7 @@
 #include <iostream>
 #include <vector>
 #include <limits>
-#include "Assert.h"
+#include <cassert>
 #include "Random.h"
 
 using namespace std;
@@ -83,7 +83,7 @@ inline std::string ftos(const double a_Arg)
 //clamps the first argument between the second two
 inline void Clamp(double &a_Arg, const double a_Min, const double a_Max)
 {
-    ASSERT(a_Min <= a_Max);
+    assert(a_Min <= a_Max);
 
     if (a_Arg < a_Min)
     {
@@ -101,7 +101,7 @@ inline void Clamp(double &a_Arg, const double a_Min, const double a_Max)
 //clamps the first argument between the second two
 inline void Clamp(float &a_Arg, const double a_Min, const double a_Max)
 {
-    ASSERT(a_Min <= a_Max);
+    assert(a_Min <= a_Max);
 
     if (a_Arg < a_Min)
     {
@@ -119,7 +119,7 @@ inline void Clamp(float &a_Arg, const double a_Min, const double a_Max)
 //clamps the first argument between the second two
 inline void Clamp(int &a_Arg, const int a_Min, const int a_Max)
 {
-    ASSERT(a_Min <= a_Max);
+    assert(a_Min <= a_Max);
 
     if (a_Arg < a_Min)
     {
@@ -155,7 +155,7 @@ inline int Rounded(const double a_Val)
 //mantissa is higher or lower than offset
 inline int RoundUnderOffset(const double a_Val, const double a_Offset)
 {
-    //ASSERT(a_Offset < 1 && a_Offset > -1); ???!? Should this be a test for the offset
+    //assert(a_Offset < 1 && a_Offset > -1); ???!? Should this be a test for the offset
     const int t_Integral = static_cast<int>(a_Val);
     const double t_Mantissa = a_Val - t_Integral;
 
@@ -178,9 +178,9 @@ inline void Scale(    double& a,
                     const double a_tr_min,
                     const double a_tr_max)
 {
-//        ASSERT((a >= a_min) && (a <= a_max));
-//        ASSERT(a_min <= a_max);
-//        ASSERT(a_tr_min <= a_tr_max);
+//        assert((a >= a_min) && (a <= a_max));
+//        assert(a_min <= a_max);
+//        assert(a_tr_min <= a_tr_max);
 
     const double t_a_r = a_max - a_min;
     const double t_r = a_tr_max - a_tr_min;
@@ -196,9 +196,9 @@ inline void Scale(    float& a,
                     const double a_tr_min,
                     const double a_tr_max)
 {
-//        ASSERT((a >= a_min) && (a <= a_max));
-//        ASSERT(a_min <= a_max);
-//        ASSERT(a_tr_min <= a_tr_max);
+//        assert((a >= a_min) && (a <= a_max));
+//        assert(a_min <= a_max);
+//        assert(a_tr_min <= a_tr_max);
 
     const double t_a_r = a_max - a_min;
     const double t_r = a_tr_max - a_tr_min;

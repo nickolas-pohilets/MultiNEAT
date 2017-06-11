@@ -53,7 +53,7 @@
 #include "Substrate.h"
 #include "Innovation.h"
 #include "Genes.h"
-#include "Assert.h"
+#include <cassert>
 #include "PhenotypeBehavior.h"
 #include "Random.h"
 

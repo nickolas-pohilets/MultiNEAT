@@ -39,7 +39,7 @@
 #include "PhenotypeBehavior.h"
 #include "Population.h"
 #include "Utils.h"
-#include "Assert.h"
+#include <cassert>
 
 
 namespace NEAT
@@ -225,7 +225,7 @@ void Population::Speciate()
 {
     // iterate through the genome list and speciate
     // at least 1 genome must be present
-    ASSERT(m_Genomes.size() > 0);
+    assert(m_Genomes.size() > 0);
 
     // first clear out the species
     m_Species.clear();
@@ -284,8 +284,8 @@ void Population::Speciate()
 // Adjust the fitness of all species
 void Population::AdjustFitness()
 {
-    ASSERT(m_Genomes.size() > 0);
-    ASSERT(m_Species.size() > 0);
+    assert(m_Genomes.size() > 0);
+    assert(m_Species.size() > 0);
 
     for(unsigned int i=0; i<m_Species.size(); i++)
     {
@@ -298,8 +298,8 @@ void Population::AdjustFitness()
 // Calculates how many offspring each genome should have
 void Population::CountOffspring()
 {
-    ASSERT(m_Genomes.size() > 0);
-    ASSERT(m_Genomes.size() == m_Parameters.PopulationSize);
+    assert(m_Genomes.size() > 0);
+    assert(m_Genomes.size() == m_Parameters.PopulationSize);
 
     double t_total_adjusted_fitness = 0;
     double t_average_adjusted_fitness = 0;
@@ -315,7 +315,7 @@ void Population::CountOffspring()
     }
 
     // must be above 0
-    ASSERT(t_total_adjusted_fitness > 0);
+    assert(t_total_adjusted_fitness > 0);
 
     t_average_adjusted_fitness = t_total_adjusted_fitness / static_cast<double>(m_Parameters.PopulationSize);
 
@@ -343,12 +343,12 @@ bool species_greater(Species ls, Species rs)
 }
 void Population::Sort()
 {
-    ASSERT(m_Species.size() > 0);
+    assert(m_Species.size() > 0);
 
     // Step through each species and sort its members by fitness
     for(unsigned int i=0; i<m_Species.size(); i++)
     {
-        ASSERT(m_Species[i].NumIndividuals() > 0);
+        assert(m_Species[i].NumIndividuals() > 0);
         m_Species[i].SortIndividuals();
     }
 
@@ -374,8 +374,8 @@ void Population::UpdateSpecies()
                 t_oldbestidx = i;
             }
         }
-        ASSERT(t_oldbestid  != -1);
-        ASSERT(t_oldbestidx != -1);
+        assert(t_oldbestid  != -1);
+        assert(t_oldbestidx != -1);
     }
 
     for(unsigned int i=0; i<m_Species.size(); i++)
@@ -691,7 +691,7 @@ void Population::Epoch()
 
         while(t_nts--)
         {
-            ASSERT(m_Species.size() > 0);
+            assert(m_Species.size() > 0);
             Genome t_tg = m_Species[0].m_Individuals[0];
             m_Species[0].AddIndividual(t_tg);
         }
@@ -718,7 +718,7 @@ void Population::Epoch()
 Genome g_dummy; // empty genome
 Genome& Population::AccessGenomeByIndex(unsigned int const a_idx)
 {
-    ASSERT(a_idx < m_Genomes.size());
+    assert(a_idx < m_Genomes.size());
     unsigned int t_counter = 0;
 
     for (unsigned int i = 0; i < m_Species.size(); i++)
@@ -751,7 +751,7 @@ Genome& Population::AccessGenomeByIndex(unsigned int const a_idx)
 // Decides which species should have offspring. Returns the index of the species
 unsigned int Population::ChooseParentSpecies()
 {
-    ASSERT(m_Species.size() > 0);
+    assert(m_Species.size() > 0);
 
     double t_total_fitness = 0;
     double t_marble=0, t_spin=0; // roulette wheel variables
@@ -785,7 +785,7 @@ unsigned int Population::ChooseParentSpecies()
 // Takes a genome and assigns it to a different species (where it belongs)
 void Population::ReassignSpecies(unsigned int a_genome_idx)
 {
-    ASSERT(a_genome_idx < m_Genomes.size());
+    assert(a_genome_idx < m_Genomes.size());
 
     // first remember where is this genome exactly
     unsigned int t_species_idx = 0, t_genome_rel_idx = 0;
@@ -890,7 +890,7 @@ Genome* Population::Tick(Genome& a_deleted_genome)
     // Make sure all individuals are evaluated
     /*for(unsigned int i=0; i<m_Species.size(); i++)
         for(unsigned int j=0; j<m_Species[i].m_Individuals.size(); j++)
-            ASSERT(m_Species[i].m_Individuals[j].m_Evaluated);*/
+            assert(m_Species[i].m_Individuals[j].m_Evaluated);*/
 
     m_NumEvaluations++;
 
@@ -986,8 +986,8 @@ Genome* Population::Tick(Genome& a_deleted_genome)
     // Now spawn the new offspring
     unsigned int t_parent_species_index = ChooseParentSpecies();
     Genome t_baby = m_Species[t_parent_species_index].ReproduceOne(*this, m_Parameters, m_RNG);
-    ASSERT(t_baby.NumInputs() > 0);
-    ASSERT(t_baby.NumOutputs() > 0);
+    assert(t_baby.NumInputs() > 0);
+    assert(t_baby.NumOutputs() > 0);
     Genome* t_to_return = NULL;
 
 
@@ -1040,7 +1040,7 @@ Genome* Population::Tick(Genome& a_deleted_genome)
         }
     }
 
-    ASSERT(t_to_return != NULL);
+    assert(t_to_return != NULL);
 
     return t_to_return;
 }
@@ -1114,7 +1114,7 @@ void Population::InitPhenotypeBehaviorData(std::vector< PhenotypeBehavior >* a_p
     m_BehaviorArchive = a_archive;
     m_BehaviorArchive->clear();
 
-    ASSERT(a_population->size() == NumGenomes());
+    assert(a_population->size() == NumGenomes());
     int counter = 0;
     for(unsigned int i=0; i<m_Species.size(); i++)
     {

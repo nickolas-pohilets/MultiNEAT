@@ -51,7 +51,7 @@ InnovationDatabase::InnovationDatabase()
 // Creates an empty database but this time sets the next innov number and neuron ID
 InnovationDatabase::InnovationDatabase(int a_LastInnovationNum, int a_LastNeuronID)
 {
-    ASSERT((a_LastInnovationNum > 0) && (a_LastNeuronID > 0));
+    assert((a_LastInnovationNum > 0) && (a_LastNeuronID > 0));
 
     m_NextInnovationNum = a_LastInnovationNum;
     m_NextNeuronID = a_LastNeuronID;
@@ -154,8 +154,8 @@ void InnovationDatabase::Save(FILE *a_file)
 // If it is a NEW_NEURON innovation, in & out specify the connection that was split
 int InnovationDatabase::CheckInnovation(int a_In, int a_Out, InnovationType a_Type) const
 {
-    ASSERT((a_In > 0) && (a_Out > 0));
-    ASSERT((a_Type == NEW_NEURON) || (a_Type == NEW_LINK));
+    assert((a_In > 0) && (a_Out > 0));
+    assert((a_Type == NEW_NEURON) || (a_Type == NEW_LINK));
 
     // search the list for a match
     for(unsigned int i=0; i < m_Innovations.size(); i++)
@@ -174,8 +174,8 @@ int InnovationDatabase::CheckInnovation(int a_In, int a_Out, InnovationType a_Ty
 
 int InnovationDatabase::CheckLastInnovation(int a_In, int a_Out, InnovationType a_Type) const
 {
-    ASSERT((a_In > 0) && (a_Out > 0));
-    ASSERT((a_Type == NEW_NEURON) || (a_Type == NEW_LINK));
+    assert((a_In > 0) && (a_Out > 0));
+    assert((a_Type == NEW_NEURON) || (a_Type == NEW_LINK));
     int t_ID = -1;
 
     // search the list for a match
@@ -195,8 +195,8 @@ int InnovationDatabase::CheckLastInnovation(int a_In, int a_Out, InnovationType 
 // returns a list of indexes in the database of identical innovations
 std::vector<int> InnovationDatabase::CheckAllInnovations(int a_In, int a_Out, InnovationType a_Type) const
 {
-    ASSERT((a_In > 0) && (a_Out > 0));
-    ASSERT((a_Type == NEW_NEURON) || (a_Type == NEW_LINK));
+    assert((a_In > 0) && (a_Out > 0));
+    assert((a_Type == NEW_NEURON) || (a_Type == NEW_LINK));
 
     std::vector<int> t_idxs;
     t_idxs.clear();
@@ -220,7 +220,7 @@ std::vector<int> InnovationDatabase::CheckAllInnovations(int a_In, int a_Out, In
 // If not found, returns -1
 int InnovationDatabase::FindNeuronID(int a_In, int a_Out) const
 {
-    ASSERT((a_In > 0) && (a_Out > 0));
+    assert((a_In > 0) && (a_Out > 0));
 
     // search the list for a match
     for(unsigned int i=0; i < m_Innovations.size(); i++)
@@ -238,7 +238,7 @@ int InnovationDatabase::FindNeuronID(int a_In, int a_Out) const
 
 int InnovationDatabase::FindLastNeuronID(int a_In, int a_Out) const
 {
-    ASSERT((a_In > 0) && (a_Out > 0));
+    assert((a_In > 0) && (a_Out > 0));
     int t_ID = -1;
 
     // search the list for a match
@@ -259,7 +259,7 @@ int InnovationDatabase::FindLastNeuronID(int a_In, int a_Out) const
 // Increments the m_NextInnovationNum internally
 int InnovationDatabase::AddLinkInnovation(int a_In, int a_Out)
 {
-    ASSERT((a_In > 0) && (a_Out > 0));
+    assert((a_In > 0) && (a_Out > 0));
 
     m_Innovations.push_back( Innovation(m_NextInnovationNum, NEW_LINK, a_In, a_Out, NONE, -1) );
     m_NextInnovationNum++;
@@ -276,8 +276,8 @@ int InnovationDatabase::AddLinkInnovation(int a_In, int a_Out)
 // Increments the m_NextNeuronID and m_NextInnovationNum internally
 int InnovationDatabase::AddNeuronInnovation(int a_In, int a_Out, NeuronType a_NType)
 {
-    ASSERT((a_In > 0) && (a_Out > 0));
-    ASSERT(!((a_NType == INPUT) || (a_NType == BIAS) || (a_NType == OUTPUT)));
+    assert((a_In > 0) && (a_Out > 0));
+    assert(!((a_NType == INPUT) || (a_NType == BIAS) || (a_NType == OUTPUT)));
 
     m_Innovations.push_back( Innovation(m_NextInnovationNum, NEW_NEURON, a_In, a_Out, a_NType, m_NextNeuronID) );
     m_NextInnovationNum++;

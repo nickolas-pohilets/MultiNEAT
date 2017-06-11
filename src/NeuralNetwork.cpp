@@ -36,7 +36,7 @@
 #include <string>
 #include <iostream>
 #include "NeuralNetwork.h"
-#include "Assert.h"
+#include <cassert>
 #include "Utils.h"
 
 //#define NULL 0
